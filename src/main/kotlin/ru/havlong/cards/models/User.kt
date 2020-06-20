@@ -1,9 +1,6 @@
 package ru.havlong.cards.models
 
-import javax.persistence.Entity
-import javax.persistence.EnumType
-import javax.persistence.Enumerated
-import javax.persistence.Id
+import javax.persistence.*
 
 /**
  * 13.06.2020
@@ -13,12 +10,13 @@ import javax.persistence.Id
  * @version v1.0
  */
 @Entity
+@Table(name = "user")
 data class User(
-        @Id var id: Long,
+        @Id var id: Long?,
         @Enumerated(value = EnumType.STRING) var userState: UserState,
         @Enumerated(value = EnumType.STRING) var userRole: UserRole,
         var username: String,
         var hashPassword: String
 ) {
-    constructor() : this(0, UserState.ACTIVE, UserRole.USER, "", "")
+    constructor() : this(null, UserState.ACTIVE, UserRole.USER, "", "")
 }

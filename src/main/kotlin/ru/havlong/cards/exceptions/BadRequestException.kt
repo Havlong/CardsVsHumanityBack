@@ -11,4 +11,6 @@ import org.springframework.web.bind.annotation.ResponseStatus
  * @version v1.0
  */
 @ResponseStatus(code = HttpStatus.BAD_REQUEST)
-class BadRequestException(message: String?) : RuntimeException(message)
+class BadRequestException(message: String) : RuntimeException(message) {
+    constructor() : this("No message provided on this error")
+}

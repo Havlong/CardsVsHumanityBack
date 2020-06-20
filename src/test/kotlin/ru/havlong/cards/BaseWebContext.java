@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @DataJpaTest
 @EnableJpaRepositories(basePackages = "ru.havlong.cards.store.repository")
-public class BaseWebContext { }
+public class BaseWebContext {
+
+}
