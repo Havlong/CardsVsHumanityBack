@@ -1,0 +1,22 @@
+---
+
+  logging:
+    level:
+      org.springframework: INFO
+
+  server:
+    port: 9090
+
+  spring:
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost/cards
+      username: postgres
+      password: postgres
+    jpa:
+      show-sql: false
+      hibernate:
+        ddl-auto: update
+    jackson:
+      serialization:
+        indentOutput: true

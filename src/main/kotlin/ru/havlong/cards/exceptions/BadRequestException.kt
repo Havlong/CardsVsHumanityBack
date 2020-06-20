@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.ResponseStatus
  * @author Havlong
  * @version v1.0
  */
-@ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "Received request was malformed")
-class BadRequestException : RuntimeException()
+@ResponseStatus(code = HttpStatus.BAD_REQUEST)
+class BadRequestException(message: String?) : RuntimeException(message)
